@@ -7,7 +7,7 @@ import PaginaPlanetas from "./paginas/planetas";
 import PaginaPlaneta from "./paginas/planeta";
 
 export default function App() {
-  return(<>
+  return(<> 
       <ThemeProvider theme={tema}>
         <BrowserRouter>
           <Routes>
