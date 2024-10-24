@@ -5,6 +5,9 @@ const tema = createTheme({
     primary: {
       main: "#F5D837",
       contrastText: "#644AA2"
+    },
+    white:{
+      main: '#FFF'   
     }
   },
   typography:{
