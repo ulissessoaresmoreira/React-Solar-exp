@@ -17,7 +17,7 @@ export default function PaginaInicio() {
         <Typography variant="h3" component="h1" textAlign="center">Conheça os planetas do sistema solar</Typography>
         <img className="animacaoEfeitoFlutuando" src='/img/astronauta.png' alt="Astronauta Flutuando" />
         <Link to="/planetas" >
-          <Button variant="contained" size='large'>Decolar<ArrowForwardIosIcon/> </Button>
+          <Button variant="contained" size='large' endIcon={<ArrowForwardIosIcon/>}>Decolar </Button>
         </Link>
         
       </Stack>

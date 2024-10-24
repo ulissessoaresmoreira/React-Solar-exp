@@ -17,8 +17,8 @@ export default function PaginaPlaneta() {
     <>
       <Container maxWidth="xl" className="containerMargin">
         <Link to="/planetas">
-          <Button variant="outlined" size="large" >
-            <ArrowBackIosIcon /> Voltar
+          <Button variant="outlined" size="large" startIcon={<ArrowBackIosIcon />} >
+            Voltar
           </Button>
         </Link>
         <Stack
@@ -37,9 +37,9 @@ export default function PaginaPlaneta() {
           <Typography variant="body1" component="p">
             Descrição do planeta Terra
           </Typography>
-          <Button variant="contained" size="large" onClick={() => {ClickCompartilhar()}}>
+          <Button variant="contained" size="large" endIcon={<ShareIcon />} onClick={() => {ClickCompartilhar()}}>
             {' '}
-            <ShareIcon /> Compartilhar
+            Compartilhar
           </Button>
         </Stack>
       </Container>
