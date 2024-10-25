@@ -14,6 +14,7 @@ import ApiPlanetas from '../api/planetas';
 export default function PaginaPlanetas() {
   const [carregando, setCarregando] = useState(false);
   const [erro, setErro] = useState(null);
+  // eslint-disable-next-line
   const [msg, setMsg] = useState(null);
   const [planetas, setplanetas] = useState([]);
 
@@ -39,8 +40,8 @@ export default function PaginaPlanetas() {
   return (
     <ComponenteLayoutPadrao carregando={carregando} erro={erro} msg={msg}>
       <Container maxWidth="xl" className="containerMargin">
-        <Typography variant="h2" component="h1" textAlign={'center'}>
-          Planetas do sistema solar
+        <Typography variant="h2" component="h1" textAlign={'center'} >
+          Planetas do sistema solar          
         </Typography>
         <Grid2 container spacing={2} pt={2}>
           {/* XS = 2 ITEMS*/}
