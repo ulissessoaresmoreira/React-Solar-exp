@@ -36,17 +36,28 @@ export default function PaginaPlaneta() {
   }, [parametros]);
 
   async function ClickCompartilhar() {
-    let resImg = await fetch(planeta?.imgUrl);
-    let contentType = resImg.headers.get("content-type");
-    let blob = await resImg.blob();
-    let binaryFile = new File([blob], `${planeta?.nome} - ${planeta?.nome}`, {type: contentType});
+    // let resImg = await fetch(planeta?.imgUrl);
+    // let contentType = resImg.headers.get("content-type");
+    // let blob = await resImg.blob();
+    // let binaryFile = new File([blob], `${planeta?.nome} - ${planeta?.nome}`, {type: contentType});
 
-    window.navigator.share({
-      url: `${window.location.href}`,
-      text: `Explore o planeta ${planeta?.nome} e duscubra suas peculiaridades.`,
-      title: `Conheça ${planeta?.nome}`,
-      files: Array(binaryFile)
-    });
+    // window.navigator.share({
+    //   url: `${window.location.href}`,
+    //   text: `Explore o planeta ${planeta?.nome} e duscubra suas peculiaridades.`,
+    //   title: `Conheça ${planeta?.nome}`,
+    //   files: Array(binaryFile)
+    // });
+    if (navigator.share) {
+      navigator.share({
+        title: 'Confira este site',
+        text: 'Dê uma olhada neste site incrível!',
+        url: window.location.href
+      })
+      .then(() => console.log('Link compartilhado com sucesso!'))
+      .catch((error) => console.error('Erro ao compartilhar o link:', error));
+    } else {
+      console.log('API de compartilhamento não suportada neste navegador.');
+    }
   }
 
   return (
