@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "ulissesmoreira.netlify.app",
+        "sha256_cert_fingerprints": ["E2:AF:05:1C:E2:04:1D:B7:CC:0F:C2:D7:15:3C:7E:52:D3:7B:30:6E:ED:71:5F:0B:70:1C:1C:38:26:B1:FB:1B"]
+      }
+    }]
