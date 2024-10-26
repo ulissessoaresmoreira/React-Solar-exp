@@ -24,3 +24,4 @@ yarn-error.log*
 
 
 *-lock.json
+appAndroid/signing-key-info.txt
